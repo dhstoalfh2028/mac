@@ -1,0 +1,824 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,li {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.after::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.top {
+    min-width: 1900px;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    box-sizing: border-box;
+    float: left;
+    position: fixed;
+    position: relative;
+    z-index: 10;
+}
+.top>.logo {
+    float: left;
+    width: 8%;
+    height: 20px;
+    background-image: url(img/logo.svg);
+    background-repeat: no-repeat;
+    
+    margin: 20px 110px;
+}
+.top>.menu {
+    color: white;
+    line-height: 60px;
+    text-align: center;
+    width: 60%;
+    font-size: 0.95em;
+    float: left;
+
+}
+.menu>ul {
+    display: flex;
+    justify-content: space-around;
+
+}
+.menu>ul>li {
+    width: 100px;
+    height: 60px;
+}
+.menu>ul>li:hover {
+    text-decoration-line: underline;
+    transition: 1s;
+}
+.menu>ul>li:nth-child(4) {
+    color: red;
+}
+.seconbar {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    float: left;
+    background-color: white;
+    left: 0px;
+    display: none;
+}
+.seconbar>li {
+    color: black;
+    float: left;
+    width: 20%;
+    text-align: center;
+    line-height: 80px;
+}
+.seconbar>li:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+.menu>ul>li:first-child:hover>.seconbar {
+    display: block;
+    transition: 1s;
+}
+.thirdbar {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    float: left;
+    background-color: white;
+    left: 0px;
+    display: none;
+}
+.thirdbar>li {
+    color: black;
+    float: left;
+    width: 20%;
+    text-align: center;
+    line-height: 80px;
+}
+.thirdbar>li:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+.menu>ul>li:nth-child(2):hover>.thirdbar {
+    display: block;
+    transition: 1s;
+}
+.fourthbar {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    float: left;
+    background-color: white;
+    left: 0px;
+    display: none;
+}
+.fourthbar>li {
+    color: black;
+    float: left;
+    width: 20%;
+    text-align: center;
+    line-height: 80px;
+}
+.fourthbar>li:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+.menu>ul>li:nth-child(7):hover>.fourthbar {
+    display: block;
+    transition: 1s;
+}
+.top>.icon>.search {
+    font-size: 1.4em;
+    color: white;
+    float: left;
+    width: 60px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+.searchbox {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 100px;
+    box-sizing: border-box;
+    background-color: white;
+    color: grey;
+    float: left;
+    position: absolute;
+    font-size: 15px;
+    top: 60px;
+    left: 0;
+    display: none;
+}
+.searchbox>input {
+    border: none;
+    color: grey;
+    padding: 10px;
+    font-size: 15px;
+}
+.top>.icon>.search:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+.search:hover>.searchbox{
+   display: block;
+   transition: 1s;
+}
+.top>.icon>.mail {
+    font-size: 1.9em;
+    color: white;
+    float: left;
+    line-height: 60px;
+    margin: auto 30px;
+}
+.top>.login {
+    width: 7%;
+    height: 60px;
+    background-color: rgb(58, 58, 58);
+    float: left;
+    line-height: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.top>.login>p {
+    color: white;
+    text-decoration-line: underline;
+    font-size: 0.75em;
+}
+.top>.loginbox {
+    width: 300px;
+    height: 350px;
+    background: white;
+    position: absolute;
+    padding: 20px;
+    top: 60px;
+    left: 82%;
+    box-sizing: border-box;
+}
+.loginbox>h3 {
+    font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
+}
+.loginbox>p {
+    font-size: 12px;
+}
+.loginbox>.signup {
+    font-size: 12px;
+    color: grey;
+    position: absolute;
+    top: 81px;
+    left: 240px;
+}
+.loginbox>.signup:hover {
+    text-decoration: underline;
+}
+.loginbox>input {
+    margin: 4px 0;
+    width: 240px;
+    height: 40px;
+    padding: 5px;
+}
+.loginbox>.btn {
+    width: 260px;
+    height: 60px;
+    background-color: black;
+    line-height: 60px;
+    color: white;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.loginbox>.btn:hover {
+    background-color: #ddd;
+    color: black;
+    transition: 0.5s;
+}
+.loginbox>a {
+    font-size: 12px;
+    color: grey;
+    position: relative;
+    left: 140px;
+    margin-top: 10px;
+}
+.loginbox>a:hover {
+    text-decoration: underline;
+}
+.loginbox {
+    display: none;
+}
+.loginbox.active {
+    display: block;
+    transition: 1s;
+}
+.login:hover {
+    background-color: white;
+}
+.login:hover>p {
+    color: black;
+}
+.top>.cart {
+    font-size: 1.55em;
+    color: white;
+    float: left;
+    line-height: 60px;
+    margin: auto 30px;
+}
+.visual {
+    min-width: 1900px;
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(163, 0, 0);
+    padding: 145px;
+    box-sizing: border-box;
+    float: left;
+    background-image: url(img/visual.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.visual>.text {
+    float: left;
+}
+.visual>.text>.logo {
+    width: 110%;
+    height: 250px;
+    background-image: url(img/viva.webp);
+    background-repeat: 
+    no-repeat;
+
+    background-size: contain;
+}
+.visual>.text>p {
+    color: white;
+    z-index: 9;
+    position: relative;
+    top: -40px;
+    left: 40px;
+    font-size: 17px;
+}
+.visual>.vedio {
+    float: left;
+    position: absolute;
+    left: 720px;
+    width: 60%;
+    height: 300px;
+}
+.one {
+    min-width: 1500px;
+
+    width: 80%;
+    height: 800px;
+    margin-left: 10%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color:#AE756A;
+    box-sizing: border-box;
+    float: left;
+    overflow: hidden;
+}
+.one>.box>.pic {
+    width: 100%;
+    height: 600px;
+    margin-top: 120px;
+    background-image: url(img/fallflower.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.one>.box .text1 {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    top: -660px;
+    left: 100px;
+    font-size: 60px;
+    color: rgba(245, 245, 220, 0.699);
+}
+.one>.box .text2 {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    top: -730px;
+    left: 1050px;
+    font-size: 110px;
+    color: rgb(80, 55, 55);
+}
+
+.one>.box .text3 {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    top: -290px;
+    left: 150px;
+    font-size: 90px;
+    color: rgb(83, 33, 33);
+}
+
+.one>.box .text4 {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    top: -330px;
+    left: 1000px;
+    font-size: 70px;
+    color: rgba(245, 245, 220, 0.699);
+}
+.one .seconbox {
+    min-width: 1500px;
+    width: 80%;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    float: left;
+    top: 1160px;
+    left: 10%;
+    opacity: 0;
+}
+.one>.seconbox:hover {
+    opacity: 1;
+    transition: 1s;
+}
+.seconbox div {
+    width: 500px;
+    height: 270px;
+    position: relative;
+}
+.seconbox>.img1 {
+    background-image: url(img/duskyrose.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50px;
+    left: 60px;
+}
+.seconbox>.img2 {
+    background-image: url(img/vintagenude.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -50px;
+    left: 1000px;
+}
+.seconbox>.img3 {
+    background-image: url(img/넘버\ 3.어텀브릭부케.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -50px;
+    left: 140px;
+}
+.seconbox h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 80px;
+    width: 500px;
+    position: absolute;
+    cursor: pointer;
+}
+.img1>h1 {
+    left: 600px;
+    top: 50px;
+    width: 500px;
+    color: rgb(138, 59, 59);
+}
+.img2>h1 {
+    left: -700px;
+    width: 1000px;
+    top: 100px;
+    color: rgb(128, 77, 77);
+}
+.img3>h1 {
+    left: 600px;
+    top: 50px;
+    width: 900px;
+    color: rgb(114, 33, 33);
+}
+.seconbox h1:hover {
+    color: white;
+    transition: 1s;
+}
+.two {
+    min-width: 1500px;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 100px;
+    height: 800px;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+.two>.box1 {
+    width: 52%;
+    height: 700px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    background-image: url(img/glowlip.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.two>.box2 {
+    width: 52%;
+    height: 700px;
+    position: absolute;
+    top: 100px;
+    left: 48%;
+    z-index: 1;
+    background-image: url(img/holidaylip.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.two>.box2:hover {
+    z-index: 4;
+    transition: 0.5s;
+}
+.two>.box1>.box1-1 {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 5%;
+    box-sizing: border-box;
+    z-index: 5;
+    opacity: 0;
+}
+.two>.box1>.box1-1:hover {
+    opacity: 1;
+    transition: 1s;
+}
+.two>div div h1 {
+    color: white;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 70px;
+}
+.two>div div p {
+    color: white;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.two>div div .btn {
+    font-size: 100px;
+    color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+.two>div div .btn:hover {
+    color: rgb(255, 151, 151);
+    transition: 0.5s;
+}
+.two>.box2>.box2-1 {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 5%;
+    box-sizing: border-box;
+    z-index: 5;
+    opacity: 0;
+}
+.two>.box2>.box2-1:hover {
+    opacity: 1;
+    transition: 1s;
+}
+.two>.box2>.box2-1>.btn:hover {
+    color: rgb(187, 151, 243);
+    transition: 0.5s;
+}
+.three {
+    min-width: 1500px;
+    width: 80%;
+    height: 750px;
+    margin-left: 10%;
+    float: left;
+    margin-bottom: 100px;
+}
+.three>div {
+    width: 100%;
+    height: 216.666px;
+    margin-bottom: 50px;
+}
+.virtual {
+    background-color: #F9F9F9;
+    position: relative;
+}
+.virtual>h1 {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 60px;
+    position: absolute;
+    top: 45px;
+    left: 1000px;
+}
+.good {
+    background-color: white;
+    overflow: hidden;
+}
+.offer {
+    background-color: #EAD4C2;
+    overflow: hidden;
+}
+.offer>p {
+    position: relative;
+    top: -180px;
+    left: 710px;
+    font-size: 20px;
+}
+.offer>h1 {
+    position: relative;
+    top: -180px;
+    left: 700px;
+    font-size: 50px;
+}
+.four {
+    min-width: 1500px;
+    width: 80%;
+    margin-left: 10%;
+    height: 760px;
+    box-sizing: border-box;
+    float: left;
+    background-color: black;
+}
+.four>p {
+    color: white;
+    position: relative;
+    font-size: 25px;
+    left: 30px;
+    top: 12px;
+}
+
+/* 노멀라이징 */
+
+/* 라이브러리 */
+.con{
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 100px;
+  }
+  /* 스타일 */
+  /* 슬릭js 스타일 변경 st */
+  /* 슬라이드 높이 변경  */
+  .slick-track{
+    height: 700px ;
+  }
+.slick-prev:before, .slick-next:before{
+    color: black;
+    opacity: 1 ; 
+  }
+  /* 화살표 위치 변경 */
+  .slick-prev{
+    left: 20px !important ;
+    z-index: 9 ;
+  }
+  .slick-next{
+    right: 20px !important ;
+    z-index: 9 ;  
+  }
+  
+  /* 버튼 위치 변경 */
+  .slick-dots{
+    bottom : 0 !important;
+  }
+  /* 버튼 색상 변경 (마우스 오버)  */
+  .slick-dots li button:hover:before, .slick-dots li button:focus:before{
+    color: red ;
+  }
+  
+  /* 버튼 색상 변경 (활성화)  */
+  .slick-dots li.slick-active button:before{
+    color: red !important;  
+  }
+  
+  /* 버튼 색상 변경 (비활성화)  */
+  .slick-dots li button:before{
+    color: red !important;  
+  }
+  /* 슬릭js 스타일 변경 en */
+  .slider-items{
+    background-repeat: no-repeat ;
+    background-size: cover ;
+  }
+  .slider-items{
+    background-color: white ;
+  }
+.item1:hover .img img{
+    opacity: 0;
+    transition: 0.5s;
+}
+.item1:hover .img{
+    background-image: url(img/글로우플레이립밤2.webp);
+    width: 100%;
+    height: 470px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 100px;
+}
+.item2:hover .img img{
+    opacity: 0;
+    transition: 0.5s;
+}
+.item2:hover .img{
+    background-image: url(img/파우더키스\ 키트2.webp);
+    width: 100%;
+    height: 470px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 100px;
+}
+.item3:hover .img img{
+    opacity: 0;
+    transition: 0.5s;
+}
+.item3:hover .img{
+    background-image: url(img/로켓투페임\ 팔레트2.webp);
+    width: 100%;
+    height: 470px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 100px;
+}
+.item4:hover .img img{
+    opacity: 0;
+    transition: 0.5s;
+}
+.item4:hover .img{
+    background-image: url(img/파이어리트키트2.webp);
+    width: 100%;
+    height: 470px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 100px;
+}
+.item5:hover .img img{
+    opacity: 0;
+    transition: 0.5s;
+}
+.item5:hover .img{
+    background-image: url(img/파이어리트키트골드2.webp);
+    width: 100%;
+    height: 470px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 100px;
+}
+.item6:hover .img img{
+    opacity: 0;
+    transition: 0.5s;
+}
+.item6:hover .img{
+    background-image: url(img/스파클러스타터키트\ 브러시2.webp);
+    width: 100%;
+    height: 470px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 100px;
+}
+.item7:hover .img img{
+    opacity: 0;
+    transition: 0.5s;
+}
+.item7:hover .img{
+    background-image: url(img/파우더키스리퀴드립컬러\ 멀잇오버2.webp);
+    width: 100%;
+    height: 470px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 100px;
+}
+.item8:hover .img img{
+    opacity: 0;
+    transition: 0.5s;
+}
+.item8:hover .img{
+    background-image: url(img/파우더키스리퀴드립컬러\ 디보티드투칠리2.webp);
+    width: 100%;
+    height: 470px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 100px;
+}
+  .slider-items>p {
+      color: rgb(82, 82, 82);
+      position: relative;
+      left: 30px;
+      line-height: 25px;
+    }
+    .slider-items>span {
+        color: rgb(82, 82, 82);
+      position: relative;
+      left: 400px;
+      top: -50px;
+      line-height: 25px;
+    }
+    .item2>span {
+        top: -25px;
+    }
+    .five {
+        min-width: 1500px;
+        margin-top: 100px;
+        float: left;
+        width: 80%;
+        height: 800px;
+        margin-left: 10%;
+        margin-bottom: 100px;
+    }
+    .footer {
+        min-width: 1900px;
+        width: 100%;
+        height: 260px;
+        background-color: rgb(24, 24, 24);
+        float: left;
+        border-top: 5px rgb(24, 24, 24) solid;
+    }
+    .footer>.box1 {
+        background-color: rgb(78, 78, 78);
+        height: 200px;
+        padding: 2%;
+        box-sizing: border-box;
+
+    }
+    .box1-1>ul {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .box1-1>ul>li{
+        float: left;
+        width: 25%;
+        font-size: 19px;
+        font-weight: 999;
+    }
+    .box1-1>ul>li:hover {
+        color: white;
+        transition: 0.7s;
+    }
+    .box1-2>ul>li:hover {
+        color: white;
+        transition: 0.7s;
+    }
+    .box1-2>ul {
+        width:20%;
+        margin: 0 auto;
+    }
+    .box1-2>ul>li {
+        width: 25%;
+        float: left;
+        font-size: 30px;
+        line-height: 130px;
+    }
+    .box2 {
+        color: rgba(255, 255, 255, 0.664);
+        line-height: 60px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+  
